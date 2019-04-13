@@ -1,6 +1,6 @@
 {
     "name": "alipay-plugin",
-    "version": "0.0.1",
+    "version": "0.0.3",
     "author": "cool1024",
     "description": "支付宝支付插件",
     "dependencies": {},

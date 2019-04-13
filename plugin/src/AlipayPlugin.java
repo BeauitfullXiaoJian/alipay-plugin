@@ -20,7 +20,6 @@ public class AlipayPlugin extends CordovaPlugin {
 
     private static final String TAG = "AlipayPlugin";
     private static final int SDK_PAY_FLAG = 1;
-    private String mAppId;
     private String mOrderData;
 
     private Handler mHandler = new Handler() {
@@ -41,8 +40,7 @@ public class AlipayPlugin extends CordovaPlugin {
     public boolean execute(String action, JSONArray args, CallbackContext callbackContext) throws JSONException {
         if (action.equals("pay")) {
             Log.d(TAG, "调用支付方法");
-            mAppId = args.getString(0);
-            mOrderData = args.getString(1);
+            mOrderData = args.getString(0);
             doPay(callbackContext);
         }
         return true;

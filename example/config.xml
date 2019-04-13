@@ -25,5 +25,5 @@
     </platform>
     <engine name="android" spec="^7.0.0" />
     <engine name="ios" spec="~4.5.5" />
-    <plugin name="alipay-plugin" spec="/Users/anasit/Documents/Git/aplipay-plugin/plugin" />
+    <plugin name="alipay-plugin" spec="0.0.2" />
 </widget>
