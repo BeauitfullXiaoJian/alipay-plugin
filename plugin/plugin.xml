@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0" id="alipay-plugin" version="0.0.1">
+    <name>ALIPAY_PLUGIN</name>
+    <author>cool1024</author>
+    <license>Apache 2.0 License</license>
+    <engines>
+        <engine name="cordova" version=">=7.1.0"/>
+        <engine name="cordova-android" version=">=6.3.0" />
+    </engines>
+    <js-module src="plugin.js" name="AlipayPlugin">
+        <clobbers target="AlipayPlugin" />
+    </js-module>
+    <!-- android -->
+    <platform name="android">
+        <config-file target="res/xml/config.xml" parent="/*">
+            <feature name="AlipayPlugin">
+                <param name="android-package" value="com.plugin.AlipayPlugin" />
+            </feature>
+        </config-file>·
+        <config-file target="AndroidManifest.xml" parent="/*">
+            <!-- 相关权限 -->
+            <uses-permission android:name="android.permission.INTERNET" />
+            <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+            <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+            <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+            <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+        </config-file>
+        <!-- Java -->
+        <source-file src="src/AlipayPlugin.java" target-dir="src/com/plugin" />
+        <!-- Library -->
+        <lib-file src="src/alipaySdk-15.6.0-20190226104053.aar" />
+        <framework src="src/config.gradle" custom="true" type="gradleReference" />
+    </platform>
+     <platform name="ios">
+        <config-file target="config.xml" parent="/*">
+            <feature name="AlipayPlugin">
+                <param name="ios-package" value="AlipayPlugin" />
+            </feature>
+        </config-file>
+        <header-file src="src/AlipayPlugin.h" />
+        <source-file src="src/AlipayPlugin.m" />
+        <config-file target="*-Info.plist" parent="CFBundleURLTypes">
+            <array>
+                <dict>
+                    <key>CFBundleTypeRole</key>
+                    <string>Editor</string>
+                    <key>CFBundleURLSchemes</key>
+                    <array>
+                        <string>alipayplugin</string>
+                    </array>
+                </dict>
+            </array>
+        </config-file>
+        <framework src="src/AlipaySDK.framework" custom="true"/>
+        <framework src="SystemConfiguration.framework" />
+        <framework src="CoreTelephony.framework" />
+        <framework src="QuartzCore.framework" />
+        <framework src="CoreText.framework" />
+        <framework src="CoreGraphics.framework" />
+        <framework src="UIKit.framework" />
+        <framework src="Foundation.framework" />
+        <framework src="CFNetwork.framework" />
+        <framework src="CoreMotion.framework" />
+        <framework src="libz.tbd" />
+        <framework src="libc++.tbd" />
+    </platform>
+</plugin>

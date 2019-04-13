@@ -1,0 +1,12 @@
+dependencies {
+    compile (name: 'alipaySdk-15.6.0-20190226104053', ext: 'aar')
+}
+allprojects {
+    repositories {
+
+        flatDir {
+            dirs 'libs'
+        }
+
+    }
+}
