@@ -1,11 +1,12 @@
 # ALIPAY-PLUGIN
 
-### 安装
-`cordova plugin add alipay-plugin`
-
 ### 说明
+* ！！！！！该插件暂不适合任何其它项目，请不要安装，别浪费时间了！！！！！！
 * 支付订单数据由后台统一生成
 * ios预览版本，还无法正式使用，等待更新
+
+### 安装
+`cordova plugin add alipay-plugin`
 
 ### 参考代码
 ```js
