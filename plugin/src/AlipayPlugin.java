@@ -46,7 +46,7 @@ public class AlipayPlugin extends CordovaPlugin {
         return true;
     }
 
-    private void doPay(CallbackContext callbackContext) {
+    private void doPay(final CallbackContext callbackContext) {
 
         Runnable payRunnable = new Runnable() {
 

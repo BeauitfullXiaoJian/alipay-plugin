@@ -4,11 +4,11 @@
 * 支付订单数据由后台统一生成
 * ios appScheme 默认为'alipayplugin'
 * example项目为cordova测试项目,当前插件在cordova-android ~7.0.0,cordova-ios~4.5.5测试成功
-* 当前可用版本0.0.3（除此处列出的版本，其它任何版本都不可用！！！）
+* 当前可用版本0.0.5（除此处列出的版本，其它任何版本都不可用！！！）
 
 ### 安装
 * 默认安装 `cordova plugin add alipay-plugin`
-* 指定版本安装 `cordova plugin add alipay-plugin@0.0.3`
+* 指定版本安装 `cordova plugin add alipay-plugin@0.0.4`
 
 
 ### 参考代码
